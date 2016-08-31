@@ -1,5 +1,49 @@
-<div class="row">
-    <div class="row">
-        <button type="button" class="btn btn-success btn-lg" ui-sref="overview">Connexion</button>
+<div class="row" id="containerConnexion" ng-controller="sectionConnectionController">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-primary" id="panelConnexion">
+            <div class="panel-heading">
+                <h3 class="panel-title">Connexion</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="disabledInputServer" class="col-sm-2 control-label">Serveur</label>
+
+                        <div class="col-sm-10">
+                            <input class="form-control" id="disabledInputServer" type="text" placeholder="ServeurTest"
+                                   disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLogin" class="col-sm-2 control-label">Login</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputLogin" placeholder="Login" ng-model="connexionLogin">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" ng-model="connexionPassword">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Rester connecté
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10" ng-show="(connexionLogin.length == 0) && (connexionPassword.length == 0)">
+                            <button type="submit" class="btn btn-success" ng-click="connectionHome()">Connexion</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

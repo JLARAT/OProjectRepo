@@ -10,13 +10,17 @@ app.config(
     function ($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise("/index");
-        //
-        // Now set up the states
+
         $stateProvider
             .state('index', {
                 url: "/index",
                 templateUrl: "partials/section-connexion.html",
                 controller: 'sectionConnectionController'
+            })
+            .state('home', {
+                url: "/home",
+                templateUrl: "partials/section-home.html",
+                controller: 'sectionHomeController'
             })
             .state('overview', {
                 url: "/overview",

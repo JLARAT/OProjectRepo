@@ -3,21 +3,24 @@
  */
 
 app.controller('mainController', function ($scope, $location) {
-    $scope.nbDemande = 26;
-    $scope.nbFacture = 12;
-    $scope.nbRegulation = 20;
-    $scope.nbImpaye = 4;
-
 
 });
 
 app.controller('sectionConnectionController', function($scope, $location){
-    $scope.Connect = function(){
-      $location.path('/overview');
+    $scope.connexionLogin = "";
+    $scope.connexionPassword = "";
+
+    $scope.connectionHome = function(){
+
+        $("#containerConnexion").addClass('animated fadeOutDown').delay(1000).then($location.path('/home'));
     };
 });
 
 app.controller('sectionOverviewController', function($scope, $location){
+    $scope.nbDemande = 26;
+    $scope.nbFacture = 12;
+    $scope.nbRegulation = 20;
+    $scope.nbImpaye = 4;
     $scope.DetailsDemande = function(){
         $location.path('/demande');
     };

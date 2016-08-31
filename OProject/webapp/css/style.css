@@ -1,0 +1,14 @@
+body{
+    background-image: url("../ressources/img/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: inherit;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#panelConnexion{
+    margin-top: 25%;
+
+}

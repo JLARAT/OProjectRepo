@@ -1,6 +1,6 @@
 <?php
 require 'vendor/autoload.php';
-$router = new Api\Router\Router ($_GET['url']);
+$router = new api\Router\Router ($_GET['url']);
 $router->get ( '/', function () {
     header('location:./webapp/');
 },'AccessPoint');
