@@ -21,7 +21,6 @@
                 </a>
                 <ul class="dropdown-menu dropdown-messages">
                 </ul>
-
             </li>
             <!--Second nav icon -->
             <li class="dropdown">
@@ -30,7 +29,6 @@
                 </a>
                 <ul class="dropdown-menu dropdown-tasks">
                 </ul>
-
             </li>
             <!--Third nav icon-->
             <li class="dropdown">
@@ -68,16 +66,16 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a ui-sref="overview" ui-sref-active="active"><i class="fa fa-eye"></i> Vue d'ensemble</a>
+                        <a ui-sref="home.overview" ui-sref-active="active"><i class="fa fa-eye"></i> Vue d'ensemble</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-hotel"></i> Etablissements<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Clinique</a>
+                                <a href="#">Clinique</a>
                             </li>
                             <li>
-                                <a href="morris.html">Hopitaux</a>
+                                <a href="#">Hopitaux</a>
                             </li>
                         </ul>
                     </li>
@@ -97,7 +95,7 @@
     </nav>
     <!-- End Navigation -->
 
-
+    <div ui-view></div>
 </div>
 
 

@@ -1,14 +1,50 @@
-body{
+body {
     background-image: url("../ressources/img/wallpaper.jpg");
     background-repeat: no-repeat;
     background-position: inherit;
 }
 
-.row{
+.row {
     margin-left: 0px;
     margin-right: 0px;
 }
-#panelConnexion{
+
+#page-wrapper {
+    background: none;
+}
+
+#panelConnexion {
     margin-top: 25%;
+
+}
+
+#OverviewTitle {
+    color: #337AB7;
+    text-shadow: 1px 1px #fff;
+}
+
+.bot-left {
+    position: relative;
+}
+
+.bot-left:before, .bot-left:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -10px;
+
+}
+
+.bot-left:before {
+    top: -10px;
+    width: 3px;
+    background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#337AB7), to(transparent));
+
+}
+
+.bot-left:after {
+    right: -3px;
+    height: 3px;
+    background-image: -webkit-gradient(linear, 0 0, 30% 0, from(#337AB7), to(transparent));
 
 }
