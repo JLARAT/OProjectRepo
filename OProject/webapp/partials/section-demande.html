@@ -99,8 +99,8 @@
                     <div class="form-group">
                         <label for="selectActif">Actif</label>
                         <select class="form-control" id="selectActif" ng-model="demande.actif">
-                            <option value="Actif">Actif</option>
-                            <option value="Inactif">Inactif</option>
+                            <option value="true" ng-selected="true">Actif</option>
+                            <option value="false">Inactif</option>
                         </select>
                     </div>
                 </form>
@@ -138,10 +138,9 @@
                     </div>
                     <div class="form-group">
                         <label for="selectActif2">Actif</label>
-                        <select class="form-control" id="selectActif2" ng-model="demande.actif"
-                                ng-value="demande.actif">
-                            <option value="Actif">Actif</option>
-                            <option value="Inactif">Inactif</option>
+                        <select class="form-control" id="selectActif2" ng-model="demande.actif" ng-selected="demande.actif">
+                            <option value="true" >Actif</option>
+                            <option value="false">Inactif</option>
                         </select>
                     </div>
                 </form>
