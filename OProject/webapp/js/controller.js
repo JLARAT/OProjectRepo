@@ -73,10 +73,28 @@ app.controller('sectionDemandeController', function ($scope, $location) {
         toastr.success("Demande ajout&eacute;e");
     };
 
-    $scope.editDemande = function(d){
+    $scope.editDemande = function (d) {
         $scope.demande.id = d.id;
         $scope.demande.libelle = d.libelle;
-        (d.actif)?$("select#selectEditActif").val("true"):$("select#selectEditActif").val("false")
+        (d.actif) ? $("select#selectEditActif").val("true") : $("select#selectEditActif").val("false")
+    };
+
+    $scope.editDemandeSave = function (d) {
+        $scope.demandes[d.id - 1].libelle = d.libelle;
+        $scope.demandes[d.id - 1].actif = d.actif;
+    };
+
+    $scope.deleteDemande = function (d) {
+        bootbox.prompt("Confirmer l'ID de la demande &agrave; supprimer", function (result) {
+            if (result) {
+                if (result == d.id) {
+                    toastr.success("Demande supprim&eacute;e");
+                }
+                else {
+                    toastr.error("L'ID ne correspond pas");
+                }
+            }
+        });
     };
 
     $scope.backOverview = function () {

@@ -39,7 +39,7 @@
                                                     class="fa fa-pencil" ng-click=""></i></button>
                                         </td>
                                         <td class="col-md-1">
-                                            <button type="button" class="btn btn-danger btn-block"><i
+                                            <button type="button" class="btn btn-danger btn-block" ng-click="deleteDemande(d)"><i
                                                     class="fa fa-remove"></i></button>
                                         </td>
                                     </tr>
@@ -147,7 +147,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" ng-click="saveDemande(demande)" data-dismiss="modal">Save
+                <button type="button" class="btn btn-success" ng-click="editDemandeSave(demande)" data-dismiss="modal">Save
                     changes
                 </button>
             </div>
