@@ -63,20 +63,20 @@ app.controller('sectionDemandeController', function ($scope, $location) {
     };
     $scope.demandes.push($scope.demande1, $scope.demande2, $scope.demande3);
 
-    $scope.saveDemande = function () {
+    $scope.saveDemande = function (d) {
         $scope.demandes.push({
                 "id": $scope.demandes.length + 1,
-                "libelle": $scope.demande.libelle,
-                "actif": $scope.demande.actif
+                "libelle": d.libelle,
+                "actif": d.actif
             }
         );
         toastr.success("Demande ajout&eacute;e");
-    }
+    };
 
     $scope.editDemande = function(d){
         $scope.demande.id = d.id;
         $scope.demande.libelle = d.libelle;
-        $scope.demande.actif = d.actif;
+        (d.actif)?$("select#selectEditActif").val("true"):$("select#selectEditActif").val("false")
     };
 
     $scope.backOverview = function () {
