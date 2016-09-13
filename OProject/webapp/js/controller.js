@@ -2,47 +2,44 @@
  * Created by JOCLAR on 25/08/2016.
  */
 
-app.controller('mainController', function ($scope, $location) {
+app.controller('mainController', function ($scope, $state) {
+    $scope.showLoader = false;
     $scope.nbDemande = 26;
     $scope.nbFacture = 12;
     $scope.nbRegulation = 20;
     $scope.nbImpaye = 4;
+    $scope.connexionToken = false;
+
+    ($scope.connexionToken) ? $state.transitionTo('home.overview') : $state.transitionTo('connexion');
 
 });
+
+
 app.controller('sectionHomeController', function ($scope, $state) {
-
+    $state.transitionTo('home.overview');
 });
 
-app.controller('sectionConnectionController', function ($scope, $location) {
+app.controller('sectionConnexionController', function ($scope, $state) {
+
     $scope.connexionLogin = "";
     $scope.connexionPassword = "";
 
     $scope.connectionHome = function () {
+        $scope.showLoader = true;
+        $scope.connexionToken = true;
+        $delay(50);
+        $state.transitionTo('home.overview');
 
-        $("#containerConnexion").addClass('animated fadeOutDown').delay(1000).then($location.state('/home.overview'));
+        //$("#containerConnexion").addClass('animated fadeOutDown').delay(1000).then($location.state('/home.overview'));
     };
 });
 
 app.controller('sectionOverviewController', function ($scope, $location) {
+    $scope.showLoader = false;
 
-    $scope.DetailsDemande = function () {
-        $location.path('/demande');
-    };
-
-    $scope.DetailsFacture = function () {
-        $location.path('/facture');
-    };
-
-    $scope.DetailsRegulation = function () {
-        $location.path('/regulation');
-    };
-
-    $scope.DetailsImpaye = function () {
-        $location.path('/impaye');
-    };
 });
 
-app.controller('sectionDemandeController', function ($scope, $location) {
+app.controller('sectionDemandeController', function ($scope, $state) {
 
     $scope.demandes = [];
     $scope.demande = {};
@@ -88,6 +85,8 @@ app.controller('sectionDemandeController', function ($scope, $location) {
         bootbox.prompt("Confirmer l'ID de la demande &agrave; supprimer", function (result) {
             if (result) {
                 if (result == d.id) {
+                    $scope.demandes.splice($scope.demandes.indexOf(d.id), 1);
+                    $scope.$apply();
                     toastr.success("Demande supprim&eacute;e");
                 }
                 else {
@@ -97,25 +96,16 @@ app.controller('sectionDemandeController', function ($scope, $location) {
         });
     };
 
-    $scope.backOverview = function () {
-        $location.path('/overview');
-    };
 });
 
-app.controller('sectionFactureController', function ($scope, $location) {
-    $scope.backOverview = function () {
-        $location.path('/overview');
-    };
+app.controller('sectionFactureController', function ($scope, $state) {
+
 });
 
-app.controller('sectionRegulationController', function ($scope, $location) {
-    $scope.backOverview = function () {
-        $location.path('/overview');
-    };
+app.controller('sectionRegulationController', function ($scope, $state) {
+
 });
 
-app.controller('sectionImpayeController', function ($scope, $location) {
-    $scope.backOverview = function () {
-        $location.path('/overview');
-    };
+app.controller('sectionImpayeController', function ($scope, $state) {
+
 });

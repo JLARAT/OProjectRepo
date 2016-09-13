@@ -1,4 +1,4 @@
-<div class="row" id="containerConnexion" ng-controller="sectionConnectionController">
+<div class="row" id="containerConnexion" ng-controller="sectionConnexionController">
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-primary" id="panelConnexion">
             <div class="panel-heading">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10" ng-show="(connexionLogin.length == 0) && (connexionPassword.length == 0)">
+                        <div class="col-sm-offset-2 col-sm-10" ng-show="(connexionLogin.length != 0) && (connexionPassword.length != 0)">
                             <button type="submit" class="btn btn-success" ng-click="connectionHome()">Connexion</button>
                         </div>
                     </div>

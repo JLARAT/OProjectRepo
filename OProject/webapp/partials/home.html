@@ -1,4 +1,3 @@
-<div id="wrapper">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -66,7 +65,7 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a ui-sref="home.overview" ui-sref-active="active"><i class="fa fa-eye"></i> Vue d'ensemble</a>
+                        <a ui-sref="overview" ui-sref-active-eq="active"><i class="fa fa-eye"></i> Vue d'ensemble</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-hotel"></i> Etablissements<span class="fa arrow"></span></a>
@@ -80,22 +79,23 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-users"></i> Résidents</a>
+                        <a href="#"><i class="fa fa-users"></i> RÃ©sidents</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-arrow-circle-up"></i> Ressources</a>
+                        <a href="#"><i class="fa fa-share"></i> Ressources</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-arrow-circle-down"></i> Charges</a>
+                        <a href="#"><i class="fa fa-reply"></i> Charges</a>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- End SideBar -->
+
     </nav>
     <!-- End Navigation -->
-
-    <div ui-view></div>
+    <div id="page-wrapper">
+        <div ui-view></div>
+    </div>
 </div>
-
 

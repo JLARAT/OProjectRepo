@@ -23,6 +23,15 @@ body {
     text-shadow: 1px 1px #fff;
 }
 
+#contentLoader{
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 200;
+    text-align: center;
+    margin-top: 5%;
+    padding-top: 0.2%;
+    height: 100px;
+}
+
 .bot-left {
     position: relative;
 }

@@ -12,30 +12,35 @@ app.config(
         $urlRouterProvider.otherwise("/index");
 
         $stateProvider
-            .state('index', {
-                url: "/index",
-                templateUrl: "partials/section-overview.html",
-                controller: 'sectionConnectionController'
+            .state('connexion', {
+                url: "/connexion",
+                templateUrl: "partials/connexion.html",
+                controller: 'sectionConnexionController'
             })
-            .state('overview', {
+            .state('home', {
+                url: "/home",
+                templateUrl: "partials/home.html",
+                controller: 'sectionHomeController'
+            })
+            .state('home.overview', {
                 url: "/overview",
                 templateUrl: "partials/section-overview.html",
-                controller: 'sectionConnectionController'
+                controller: 'sectionOverviewController'
             })
-            .state('demande', {
+            .state('home.demande', {
                 url: "/demande",
                 templateUrl: "partials/section-demande.html",
                 controller: 'sectionDemandeController'
             })
-            .state('facture', {
+            .state('home.facture', {
                 url: "/facture",
                 templateUrl: "partials/section-facture.html"
             })
-            .state('regulation', {
+            .state('home.regulation', {
                 url: "/regulation",
                 templateUrl: "partials/section-regulation.html"
             })
-            .state('impaye', {
+            .state('home.impaye', {
                 url: "/impaye",
                 templateUrl: "partials/section-impaye.html"
             })
