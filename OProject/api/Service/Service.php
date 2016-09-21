@@ -1,5 +1,5 @@
 <?php
-namespace Api\Service;
+namespace api\Service;
 interface Service {
 	public function findAll();
 	public function findOne($id);

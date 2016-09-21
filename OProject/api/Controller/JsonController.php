@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Controller;
+namespace api\Controller;
 
 class JsonController {
 	public function __construct(){

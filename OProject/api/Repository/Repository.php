@@ -1,5 +1,5 @@
 <?php
-namespace Api\Repository;
+namespace api\Repository;
 interface Repository {
 	public function findAll();
 	public function findOne($id);

@@ -13,9 +13,16 @@ body {
     background: none;
 }
 
+.navBar{
+    background-color: rgba(255,255,255,0.8);
+}
+
+.sideNavBar:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
 #panelConnexion {
     margin-top: 25%;
-
 }
 
 #OverviewTitle {

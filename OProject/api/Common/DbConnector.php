@@ -11,11 +11,12 @@ class DbConnector{
     }
     private function __construct(){
             try {
-			$co = "sqlsrv:Server=localhost;Database=bddtest";
-			$c = new PDO($co, "Orpea", "aze123");
+			$hostname = "127.0.0.1";           
+			$dbname = "DB_OProject";            
+			$username = "Pentaho";            
+			$pw = "admin";  
+			$this->pdo = new \PDO ("sqlsrv:server=$hostname;database=$dbname","$username","$pw");
 			
-            // $dsn = "mysql:dbname=api;host=localhost";
-            // $this->pdo = new \PDO($dsn, "root", "MySql69003@");
         } catch (\PDOException $e) {
             return array(
                 "erreur" => "Database communication error"

@@ -1,5 +1,5 @@
 <?php
-namespace Api\Controller;
+namespace api\Controller;
 interface Controller {
 	public function findAll();
 	public function findOne($id);

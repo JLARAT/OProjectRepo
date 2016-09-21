@@ -3,7 +3,7 @@
  */
 'use strict'
 
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router', 'DemandeApp']);
 
 
 app.config(
@@ -19,6 +19,7 @@ app.config(
             })
             .state('home', {
                 url: "/home",
+                abstract:true,
                 templateUrl: "partials/home.html",
                 controller: 'sectionHomeController'
             })
@@ -28,20 +29,20 @@ app.config(
                 controller: 'sectionOverviewController'
             })
             .state('home.demande', {
-                url: "/demande",
+                url: "/Demande",
                 templateUrl: "partials/section-demande.html",
-                controller: 'sectionDemandeController'
+                controller: 'DemandeController'
             })
             .state('home.facture', {
-                url: "/facture",
+                url: "/Facture",
                 templateUrl: "partials/section-facture.html"
             })
             .state('home.regulation', {
-                url: "/regulation",
+                url: "/Fegulation",
                 templateUrl: "partials/section-regulation.html"
             })
             .state('home.impaye', {
-                url: "/impaye",
+                url: "/Impaye",
                 templateUrl: "partials/section-impaye.html"
             })
     });

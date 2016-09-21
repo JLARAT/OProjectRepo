@@ -7,12 +7,12 @@ $router->get ( '/', function () {
 $router->get('/webapp/', function() {
 	include('./webapp/index.html');
 },'FrontRoute');
-//Produit router
-$router->get( '/Produit', 'Produit#findAll', 'findAllProduit');
-$router->get( '/Produit/:id', 'Produit#findOne', 'findOneProduit');
-$router->post( '/Produit', 'Produit#save', 'saveProduit');
-$router->put( '/Produit', 'Produit#update', 'updateProduit');
-$router->delete( '/Produit/:id', 'Produit#delete', 'deleteProduit');
+//Demande router
+$router->get( '/Demande', 'Demande#findAll', 'findAllDemande');
+$router->get( '/Demande/:id', 'Demande#findOne', 'findOneDemande');
+$router->post( '/Demande', 'Demande#save', 'saveDemande');
+$router->put( '/Demande', 'Demande#update', 'updateDemande');
+$router->delete( '/Demande/:id', 'Demande#delete', 'deleteDemande');
 try {
     $router->run ();
 } catch (Exception $e) {
